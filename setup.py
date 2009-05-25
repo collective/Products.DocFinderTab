@@ -10,8 +10,8 @@ setup(name='Products.DocFinderTab',
       classifiers=[
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "Framework :: Zope2"
-        "Framework :: Plone"
+        "Framework :: Zope2",
+        "Framework :: Plone",
         ],
       keywords='Zope2 DocFinder DocFinderTab',
       author='Stefan H. Holek',
