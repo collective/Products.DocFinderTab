@@ -1,4 +1,4 @@
-# DocFinderTab 1.0.3
+# DocFinderTab 1.0.4
 # (c) 2001-2009, Stefan H. Holek, stefan@epy.co.at
 # http://zope.org/Members/shh/DocFinderTab
 # License: ZPL
@@ -13,7 +13,7 @@
 # in the first place.
 
 __doc__ = 'Add a Doc tab to all Zope objects'
-__version__ = '1.0.3'
+__version__ = '1.0.4'
 
 __refresh_module__ = 0
 

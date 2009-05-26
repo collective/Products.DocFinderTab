@@ -1,12 +1,13 @@
 from setuptools import setup, find_packages
-import os
+from os.path import join
 
-version = open(os.path.join("Products", "DocFinderTab", "version.txt")).read().strip()
+version = open(join("Products", "DocFinderTab", "version.txt")).read().strip()
 
 setup(name='Products.DocFinderTab',
       version=version,
-      description="This product makes Dieter Maurer's DocFinder available from a ZMI management tab.",
-      long_description=open(os.path.join("Products", "DocFinderTab", "README.txt")).read(),
+      description="Makes Dieter Maurer's DocFinder available from a ZMI management tab",
+      long_description=open(join("Products", "DocFinderTab", "README.txt")).read() + '\n' +
+                       open(join("Products", "DocFinderTab", "CHANGES.txt")).read(),
       classifiers=[
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",

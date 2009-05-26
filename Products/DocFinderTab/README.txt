@@ -16,19 +16,19 @@ security problems.
 .. _DocFinder: http://www.dieter.handshake.de/pyprojects/zope/DocFinder.html
 
 Egg Installation
-----------------
+================
 
 Either use easy_install or add Products.DocFinderTab to the eggs section of
 your buildout.cfg and re-run buildout.
 
 Traditional Product Installation
---------------------------------
+================================
 
 Copy or symlink the DocFinderTab subdirectory of this package into your
 Products directory.
 
 Final Steps
------------
+===========
 
 Restart Zope. This will add a "Doc" tab to every object's managment
 screens (ZMI). Now click the "Doc" tab and start exploring.
