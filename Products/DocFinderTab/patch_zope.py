@@ -19,7 +19,11 @@ __refresh_module__ = 0
 
 try:
 
-    from Globals import HTMLFile
+    try:
+        # Zope2.13+
+        from App.special_dtml import HTMLFile
+    except ImportError:
+        from Globals import HTMLFile
     from App.Management import Tabs
     from OFS.SimpleItem import Item
     from analyse import Doc as DocFinder
