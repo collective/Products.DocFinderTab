@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.0.5 - Unreleased
+------------------
+
+- Upgrade imports, remove warnings in zope 2.13.
+  [lzdych]
+
 1.0.4 - 2009-05-26
 ------------------
 
