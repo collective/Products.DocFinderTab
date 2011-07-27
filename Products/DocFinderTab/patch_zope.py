@@ -1,4 +1,4 @@
-# DocFinderTab 1.0.5
+# DocFinderTab 1.0.6
 # (c) 2001-2011, Stefan H. Holek, stefan@epy.co.at
 # http://pypi.python.org/pypi/Products.DocFinderTab
 # License: ZPL
@@ -13,7 +13,7 @@
 # in the first place.
 
 __doc__ = 'Add a Doc tab to all Zope objects'
-__version__ = '1.0.5'
+__version__ = '1.0.6'
 
 __refresh_module__ = 0
 
