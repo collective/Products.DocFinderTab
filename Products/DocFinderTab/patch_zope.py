@@ -1,8 +1,8 @@
-# DocFinderTab 1.0.4
-# (c) 2001-2009, Stefan H. Holek, stefan@epy.co.at
-# http://zope.org/Members/shh/DocFinderTab
+# DocFinderTab 1.0.5
+# (c) 2001-2011, Stefan H. Holek, stefan@epy.co.at
+# http://pypi.python.org/pypi/Products.DocFinderTab
 # License: ZPL
-# Zope: 2.7-2.12
+# Zope: 2.7-2.14
 
 # Monkey patch wrapper around Dieter Maurer's DocFinder product
 # http://www.dieter.handshake.de/pyprojects/zope/DocFinder.html
@@ -13,17 +13,18 @@
 # in the first place.
 
 __doc__ = 'Add a Doc tab to all Zope objects'
-__version__ = '1.0.4'
+__version__ = '1.0.5'
 
 __refresh_module__ = 0
 
 try:
 
     try:
-        # Zope2.13+
+        # Zope >= 2.13
         from App.special_dtml import HTMLFile
     except ImportError:
         from Globals import HTMLFile
+
     from App.Management import Tabs
     from OFS.SimpleItem import Item
     from analyse import Doc as DocFinder
