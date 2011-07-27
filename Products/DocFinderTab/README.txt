@@ -34,5 +34,5 @@ Restart Zope. This will add a "Doc" tab to every object's managment
 screens (ZMI). Now click the "Doc" tab and start exploring.
 
 See the online help for a detailed explanation of what you can
-do with DocFinderTab (or read help/README.stx directly).
+do with DocFinderTab, or read help/README.stx directly.
 
