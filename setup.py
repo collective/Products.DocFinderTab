@@ -17,7 +17,7 @@ setup(name='Products.DocFinderTab',
       keywords='Zope2 DocFinder DocFinderTab',
       author='Stefan H. Holek',
       author_email='stefan@epy.co.at',
-      url='http://plone.org/products/docfindertab',
+      url='http://pypi.python.org/pypi/Products.DocFinderTab',
       license='ZPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['Products'],
@@ -26,4 +26,4 @@ setup(name='Products.DocFinderTab',
       install_requires=[
           'setuptools',
       ],
-      )
+)
