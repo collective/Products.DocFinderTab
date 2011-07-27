@@ -61,6 +61,17 @@ except: pass
 try: simple_types[ComputedAttribute] = 1
 except: pass
 
+# DFT
+try:
+    from datetime import datetime, date, time, timedelta
+except ImportError:
+    pass
+else:
+    simple_types[datetime] = 1
+    simple_types[date] = 1
+    simple_types[time] = 1
+    simple_types[timedelta] = 1
+
 _marker = {}
 
 

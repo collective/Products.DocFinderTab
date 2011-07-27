@@ -7,6 +7,9 @@ Changelog
 - Upgrade imports, remove warnings in zope 2.13.
   [lzdych]
 
+- Do not show docstrings of datetime, date, time, and timedelta attributes.
+  [stefan]
+
 1.0.4 - 2009-05-26
 ------------------
 
@@ -27,7 +30,7 @@ Changelog
 1.0.1
 -----
 
-- Don't show docstring of DateTime attributes.
+- Do not show docstrings of DateTime attributes.
 
 1.0
 ---
