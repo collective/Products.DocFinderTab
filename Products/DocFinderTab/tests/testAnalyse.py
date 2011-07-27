@@ -15,6 +15,8 @@ from OFS.SimpleItem import SimpleItem
 from ExtensionClass import Base as ExtensionClass
 from DateTime import DateTime
 
+from datetime import datetime, date, time, timedelta
+
 from inspect import ismethod, isfunction
 from inspect import ismethoddescriptor, isdatadescriptor
 from types import NoneType
@@ -55,7 +57,11 @@ class Object(Base):
     _bool = True
     _complex = 3.14j
     _none = None
-    _datetime = DateTime()
+    _DateTime = DateTime()
+    _datetime = datetime.now()
+    _date = date.today()
+    _time = time(0, 0, 0)
+    _timedelta = timedelta(seconds=1)
 
     if PYTHON24:
         _set = set([])
@@ -188,9 +194,29 @@ class TestAnalyse(ZopeTestCase.ZopeTestCase):
         self.assertEqual(self.ob.getdoc('_none').Doc(), 'None')
 
     def testDateTime(self):
-        self.failUnless(isinstance(self.ob._datetime, DateTime))
-        self.assertEqual(self.ob.getdoc('_datetime').Type(), 'DateTime instance')
-        self.assertEqual(self.ob.getdoc('_datetime').Doc(), 'DateTime')
+        self.failUnless(isinstance(self.ob._DateTime, DateTime))
+        self.assertEqual(self.ob.getdoc('_DateTime').Type(), 'DateTime')
+        self.assertEqual(self.ob.getdoc('_DateTime').Doc(), 'DateTime')
+
+    def test_datetime(self):
+        self.failUnless(isinstance(self.ob._datetime, datetime))
+        self.assertEqual(self.ob.getdoc('_datetime').Type(), 'datetime')
+        self.assertEqual(self.ob.getdoc('_datetime').Doc(), '')
+
+    def test_date(self):
+        self.failUnless(isinstance(self.ob._date, date))
+        self.assertEqual(self.ob.getdoc('_date').Type(), 'date')
+        self.assertEqual(self.ob.getdoc('_date').Doc(), '')
+
+    def test_time(self):
+        self.failUnless(isinstance(self.ob._time, time))
+        self.assertEqual(self.ob.getdoc('_time').Type(), 'time')
+        self.assertEqual(self.ob.getdoc('_time').Doc(), '')
+
+    def test_timedelta(self):
+        self.failUnless(isinstance(self.ob._timedelta, timedelta))
+        self.assertEqual(self.ob.getdoc('_timedelta').Type(), 'timedelta')
+        self.assertEqual(self.ob.getdoc('_timedelta').Doc(), '')
 
     if PYTHON24:
         def testSetType(self):
